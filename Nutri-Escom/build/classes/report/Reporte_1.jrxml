@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bd2b4727-e404-4f2b-ac7e-c4529e25d802">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="126"/>
+	<parameter name="nombre" class="java.lang.String"/>
+	<parameter name="apellidos" class="java.lang.String"/>
+	<parameter name="boleta" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="peso" class="java.lang.String"/>
+	<parameter name="cantidad" class="java.lang.String"/>
+	<parameter name="tasa" class="java.lang.String"/>
+	<parameter name="estatura" class="java.lang.String"/>
+	<parameter name="imc" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<image>
+				<reportElement x="53" y="0" width="268" height="100" uuid="7f19c7cc-967e-47da-814f-496c1a645957"/>
+				<imageExpression><![CDATA["C:\\Users\\Sergio\\Desktop\\nutri.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="280" y="35" width="222" height="53" uuid="d9f277f0-a354-4acd-b87f-f91eff76fe76"/>
+				<textElement>
+					<font fontName="Adobe Caslon Pro" size="36" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Nutri - Escom ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="68" width="234" height="20" uuid="e77d5227-dfd1-41e8-8fac-c3b0c890b33a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[No hay nada mejor que una buena salud]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="14" width="100" height="20" uuid="0b306e6d-765a-48c5-99bd-c516bee71101"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="14" width="100" height="20" uuid="d8a0c1b1-5e7e-44f7-95b4-075459f6b6c2"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="14" width="100" height="20" uuid="e4899ccc-bb89-4143-9bc9-b5f8b9ef0046"/>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Boleta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="14" width="146" height="20" uuid="176a03ef-7b7d-4137-a44c-e9189b6cd8e9"/>
+				<text><![CDATA[Fecha de la próxima consulta]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="100" height="20" uuid="7406a09d-12ad-4158-bd3c-47435709dcbb"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="0" width="100" height="20" uuid="29bea3ef-da60-44af-9c93-e4415d5061b7"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="0" width="100" height="20" uuid="74216f0d-d5f8-4740-9fef-812116ddcb8b"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{boleta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="0" width="100" height="20" uuid="7b1d0b20-9192-4655-9d0a-2f888ccb23ab"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="42" width="33" height="20" uuid="2ed50428-fbac-47dc-8a88-c66aae9ebc7f"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Peso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="42" width="88" height="20" uuid="a16252eb-57c6-486b-b9b2-fc4cf27ba7e8"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Cantidad de água]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="42" width="114" height="20" uuid="a4b6f6f0-e0a3-4fba-9376-2e8c411b00fa"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Tasa metabólica basal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="42" width="42" height="20" uuid="44dbbf0b-b9f7-499b-a10b-5aa05f61328b"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Estatura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="42" width="39" height="20" uuid="dd90126c-9246-44a7-a3fb-8f85e2ae2a47"/>
+				<text><![CDATA[IMC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="42" width="79" height="20" uuid="93cd6ad8-6063-47b3-961e-8d2759cea8f3"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[   Tipo de Dieta]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="380" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="33" height="20" uuid="d009233a-39d7-4747-b24e-dcf60e54a271"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{peso}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="43" y="0" width="21" height="20" uuid="91a5be91-2252-4566-83ec-7de791027090"/>
+				<text><![CDATA[kg]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="0" width="59" height="20" uuid="83d6f512-d978-4857-8c3f-f48187c5a01a"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{cantidad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="129" y="0" width="13" height="20" uuid="08e84120-403b-4806-adf2-3afdaf3cea76"/>
+				<text><![CDATA[L]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="199" y="0" width="72" height="20" uuid="7a2ffd13-b800-443c-a16d-c990cc45e0f6"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{tasa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="253" y="0" width="27" height="20" uuid="00b59cf6-d235-4e10-9197-dd83fb127991"/>
+				<text><![CDATA[cal]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="311" y="0" width="42" height="20" uuid="eeb5d403-f968-4892-9694-ed81e48bc020"/>
+				<textFieldExpression><![CDATA[$P{estatura}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="335" y="0" width="18" height="20" uuid="edd6c745-f5be-47f2-9e48-cd0f9081b321"/>
+				<text><![CDATA[cm]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="378" y="0" width="41" height="20" uuid="e8039f32-b4bc-4caf-9355-d55bc53ba031"/>
+				<textFieldExpression><![CDATA[$P{imc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="440" y="0" width="79" height="20" uuid="9155f323-500e-4fa2-ab2b-79e48a998d3b"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[ Bajar de Peso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="382" y="210" width="100" height="20" uuid="18715d79-7a64-4327-8651-2206fd7a73be"/>
+				<text><![CDATA[1 yoghurt y 2 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="289" width="100" height="20" uuid="f8469fec-2613-4366-96cc-730667bfeb1e"/>
+				<text><![CDATA[1 manzana y]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="329" width="555" height="1" uuid="e2ffac1e-ff59-4485-a751-c552fa9ecf9b"/>
+			</line>
+			<staticText>
+				<reportElement x="280" y="70" width="91" height="20" uuid="0d81d60c-6f97-44b1-8a9a-75fdcc9b0bfa"/>
+				<text><![CDATA[        Comida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="100" width="138" height="20" uuid="1c5baa3c-5455-403b-bb49-736482d5b60b"/>
+				<text><![CDATA[espinacas y 1 tomate, café]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="194" width="100" height="20" uuid="50a0685e-60c6-4c96-ac42-9068de2fd889"/>
+				<text><![CDATA[tomate y aguacate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="250" width="100" height="20" uuid="8dac57d8-2f49-4622-a287-1c5470333658"/>
+				<text><![CDATA[Ensalada grande de]]></text>
+			</staticText>
+			<line>
+				<reportElement x="181" y="70" width="1" height="301" uuid="395057da-4445-48f9-b3dd-483b8224815c"/>
+			</line>
+			<staticText>
+				<reportElement x="471" y="330" width="100" height="20" uuid="313796e1-2592-402e-9ab5-4a0f82aa12ec"/>
+				<text><![CDATA[Tortilla de vegetales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="289" width="51" height="20" uuid="371627f0-ec7a-41cb-b5ab-e07821f9b70e"/>
+				<text><![CDATA[Sabado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="214" width="36" height="20" uuid="9fba5e82-6f8a-4b24-86e7-3289a9e6ef0d"/>
+				<text><![CDATA[Jueves]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="90" width="100" height="20" uuid="97b7ff79-361a-469f-b8e1-b0a2900ae705"/>
+				<text><![CDATA[Filete con verdura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="299" width="128" height="20" uuid="3612a7e8-b03c-487a-8f96-70a084e659f2"/>
+				<text><![CDATA[espinacas y 1 café (solo)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="330" width="100" height="20" uuid="ba803373-3b24-4f4f-9571-d7c8a40486ee"/>
+				<text><![CDATA[1 pera y 6 almendras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="214" width="101" height="20" uuid="976a3dbe-e5be-4b3d-9531-028f1cb78820"/>
+				<text><![CDATA[1 pera y 6 almendras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="140" width="112" height="20" uuid="ff629cb0-3f41-498a-a8e0-ce6177d1be21"/>
+				<text><![CDATA[con pimientos y ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="170" width="53" height="20" uuid="8e28001f-8cc7-4935-816f-a3da4f48ed69"/>
+				<text><![CDATA[Miercoles]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="268" width="100" height="20" uuid="538d9841-2637-450f-a4bc-43d5afe18766"/>
+				<text><![CDATA[atún con leghuga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="70" width="84" height="20" uuid="65715895-6540-4cc8-bdbe-281c93c7b892"/>
+				<text><![CDATA[          Cena]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="181" width="100" height="20" uuid="9cb9440c-af90-4b04-b059-29729b64e4a5"/>
+				<text><![CDATA[atún con lechuga ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="210" width="100" height="20" uuid="7e20cff5-a278-45c8-ad9a-ee2168eececb"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="251" width="51" height="20" uuid="36490cc3-955a-4f32-b72c-6040c1e9c29f"/>
+				<text><![CDATA[Viernes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="130" width="36" height="20" uuid="5aa0a868-b648-49a2-ac88-17905fd8919e"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Martes]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="170" width="555" height="1" uuid="ffb7d573-2992-4363-85ed-83ca47f1d73a"/>
+			</line>
+			<staticText>
+				<reportElement x="472" y="289" width="100" height="20" uuid="6cbee7c8-d644-42d4-bb01-4e7a2ee7d00f"/>
+				<text><![CDATA[Ensalada grande de]]></text>
+			</staticText>
+			<line>
+				<reportElement x="41" y="70" width="1" height="301" uuid="94f3b61b-61a1-43f8-aace-955b9def0ab7"/>
+			</line>
+			<staticText>
+				<reportElement x="481" y="90" width="100" height="20" uuid="099b2e0f-685f-4951-928d-033108aea182"/>
+				<text><![CDATA[Pescado con enzala-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="171" width="154" height="20" uuid="1ca8d021-c8aa-435b-908b-0632de70e470"/>
+				<text><![CDATA[Pavo con ensalada, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="329" width="136" height="20" uuid="1d57411a-75aa-473c-82c2-94a999ce552f"/>
+				<text><![CDATA[1 yoghurt con avena, 3 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="129" width="119" height="20" uuid="a0f93529-9151-4d97-bc64-d08475c442b3"/>
+				<text><![CDATA[pescado a la plancha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="191" width="100" height="20" uuid="dab891ed-6722-404a-928b-87a6e29d7e20"/>
+				<text><![CDATA[aguacate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="268" width="100" height="20" uuid="b61c6e4d-efb7-48b2-931f-b1e77bba2ba7"/>
+				<text><![CDATA[y 6 almendras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="181" width="117" height="20" uuid="1cbbbc22-154e-4866-9bc8-47aa6985ffc8"/>
+				<text><![CDATA[de lechuga, tomate y ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="221" width="136" height="20" uuid="b93e98e5-990b-47a8-a55c-45245f93b721"/>
+				<text><![CDATA[ensalada.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="299" width="100" height="20" uuid="37606fee-7ec8-4596-92da-3c0004809a5e"/>
+				<text><![CDATA[nueces]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="210" width="555" height="1" uuid="b741b06a-982a-47c4-a598-85b5f289eebc"/>
+			</line>
+			<staticText>
+				<reportElement x="282" y="130" width="112" height="20" uuid="460a4b4d-1790-4087-94ab-36572b5529b8"/>
+				<text><![CDATA[Pollo a la plancha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="100" width="100" height="20" uuid="4cfced17-a243-4bc4-b0a2-a863ced1bbf4"/>
+				<text><![CDATA[y ensalada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="70" width="100" height="20" uuid="c3bd75d3-8fe0-48ea-9237-1cfc2eccb740"/>
+				<text><![CDATA[        Merienda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="481" y="100" width="100" height="20" uuid="094513c5-98e3-402f-869c-072b53526292"/>
+				<text><![CDATA[da de tomate y ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="378" y="70" width="1" height="301" uuid="a5dff7e6-7a93-40db-b599-9253384ee62f"/>
+			</line>
+			<staticText>
+				<reportElement x="381" y="90" width="121" height="20" uuid="68ad0709-3ff6-4aca-aa5b-7dc66075e337"/>
+				<text><![CDATA[Taza de frutos rojos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="382" y="251" width="100" height="20" uuid="bda3fd7b-7b3f-425e-b1bb-e78148cbfa8a"/>
+				<text><![CDATA[taza de frutos rojos ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="289" width="111" height="20" uuid="f5eff513-7220-4d25-8990-c420bf3e6d2c"/>
+				<text><![CDATA[Lomo de cerdo con]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="299" width="100" height="20" uuid="b77ccb7f-18fb-4b78-b666-35a275d32d8b"/>
+				<text><![CDATA[de atún con lechuga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="289" width="100" height="20" uuid="e9cc6a54-662a-4bed-a40c-55e9ead8a565"/>
+				<text><![CDATA[1 yoghurt y 2 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="140" width="100" height="20" uuid="86fe41ae-4f97-4f04-8d24-e2408636bb28"/>
+				<text><![CDATA[con ensalada de ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="471" y="70" width="1" height="301" uuid="ddfd8be2-4a6a-4257-8e31-78c887ee58b9"/>
+			</line>
+			<staticText>
+				<reportElement x="53" y="70" width="128" height="20" uuid="8bcab94e-1b1d-4413-b53e-76b334091d1d"/>
+				<text><![CDATA[              Desayuno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="100" width="121" height="20" uuid="543b87ff-8ca8-4fa2-a1f7-53aadd0d829a"/>
+				<text><![CDATA[y 6 almendras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="70" width="100" height="20" uuid="38591a8a-aaba-4f11-8c21-e1af04bc5b5c"/>
+				<text><![CDATA[    Media Mañana]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="129" width="555" height="1" uuid="c1b45eb5-cc15-4565-b73c-4eacacb91879"/>
+			</line>
+			<staticText>
+				<reportElement x="282" y="210" width="128" height="20" uuid="6e1e947d-24d4-4c65-a556-2b735ce987d4"/>
+				<text><![CDATA[Filete con verdura y ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="90" width="100" height="20" uuid="15cd5599-2587-4cb6-8484-29a352c0fa28"/>
+				<text><![CDATA[1 manzana y 2 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="330" width="121" height="20" uuid="94b8bdcd-1950-4e52-9f7e-1f8fd9547d44"/>
+				<text><![CDATA[Taza de frutos rojos]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="288" width="555" height="1" uuid="ab7c1c10-5634-4327-a9db-8498671afb74"/>
+			</line>
+			<staticText>
+				<reportElement x="53" y="289" width="136" height="20" uuid="c8af7ff8-88e2-408b-a62f-4a9c3e3b73f6"/>
+				<text><![CDATA[Tortilla 2 de huevos con  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="269" width="100" height="20" uuid="2004b9dd-d05f-4873-8976-7ba765451751"/>
+				<text><![CDATA[ces.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="130" width="100" height="20" uuid="4910a051-fb74-48b1-a591-5232090af26b"/>
+				<text><![CDATA[1 yoghurt y 2 nueces]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="90" width="146" height="20" uuid="0b7609e6-11d1-4930-b7b1-11ee12c5334b"/>
+				<text><![CDATA[Tortilla de 2 huevos con ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="268" width="100" height="20" uuid="fd277691-4997-4979-a41b-1d6407187fdf"/>
+				<text><![CDATA[con ensalada.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="279" y="70" width="1" height="301" uuid="410056f5-e1a4-43e6-af72-38ef56e17476"/>
+			</line>
+			<staticText>
+				<reportElement x="282" y="330" width="100" height="20" uuid="def1a6a7-7390-44c1-99c3-0a9502711144"/>
+				<text><![CDATA[Salmón al horno con]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="249" width="555" height="1" uuid="0f9e2dc5-9336-4c2e-b861-0d9abce63caa"/>
+			</line>
+			<staticText>
+				<reportElement x="-8" y="329" width="51" height="20" uuid="be7553eb-0501-479a-a262-76375a0a2139"/>
+				<text><![CDATA[Domingo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="249" width="106" height="20" uuid="d98698cb-6a4d-451c-bda3-59baa11ddb66"/>
+				<text><![CDATA[1 manzana y 2 nue-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="221" width="136" height="20" uuid="cd42945a-a6bc-4ffe-ab3b-c998cde3ea1e"/>
+				<text><![CDATA[nueces]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="130" width="138" height="20" uuid="c5259f18-7357-4083-b60f-b0deeaf29e33"/>
+				<text><![CDATA[2 huevos revueltos con ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="170" width="109" height="20" uuid="b10453f6-dc9f-49ef-a5f3-0edf8115d1fd"/>
+				<text><![CDATA[Ensalada grande  de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="299" width="100" height="20" uuid="942745cb-9053-4c90-96d9-047f8bf2ad75"/>
+				<text><![CDATA[ensalada.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="140" width="138" height="20" uuid="e726c63d-7462-4583-8de9-7f56dd965f04"/>
+				<text><![CDATA[cebolla picada y 1 tomate, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="250" width="146" height="20" uuid="5ac88b07-44c8-408c-b119-732cac325836"/>
+				<text><![CDATA[2 huevos revueltos  con ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="130" width="113" height="20" uuid="4c1b49e9-51bf-48c9-834c-bdba3e51e8c5"/>
+				<text><![CDATA[1 pera y 6 almendras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="90" width="36" height="20" uuid="f633ada0-7bb4-47e9-a7aa-d83d64fe4ddc"/>
+				<text><![CDATA[Lunes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="100" width="100" height="20" uuid="a4e4658d-6fe4-4fdd-b978-a765f6930b0d"/>
+				<text><![CDATA[nueces]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="248" width="109" height="20" uuid="d3b61cdc-e9c9-4eb4-af40-60d0583c6b03"/>
+				<text><![CDATA[Pescado a la plancha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="350" width="100" height="20" uuid="b170bb0d-2b96-4ec1-b8c9-6c4d84622fbf"/>
+				<text><![CDATA[ensalada.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="349" width="100" height="20" uuid="c0820c8e-7e32-4367-9bd1-237f51d61988"/>
+				<text><![CDATA[y 6 almendras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="349" width="100" height="20" uuid="ef5cd187-3ffa-4d0f-b2d4-e690b80816dd"/>
+				<text><![CDATA[(2 huevos).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="224" width="128" height="20" uuid="0460cec0-6afb-49eb-8442-b68b57459346"/>
+				<text><![CDATA[y ensalada.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="214" width="128" height="20" uuid="3bb676cc-9650-46f6-83c0-4d101f5351cf"/>
+				<text><![CDATA[sopa de calabaza ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="110" width="100" height="20" uuid="abbff2a7-7d6a-42df-8f1b-48787a4e3db7"/>
+				<text><![CDATA[solo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="110" width="121" height="20" uuid="d3b0e31e-ab0e-434b-8d9e-63696d0ac2e4"/>
+				<text><![CDATA[y esparragos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="151" width="100" height="20" uuid="7be13bef-97a6-4a43-ba72-b4e70c902833"/>
+				<text><![CDATA[café (solo).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="151" width="100" height="20" uuid="e5d183cd-1118-4ab4-b801-c2be067f67ee"/>
+				<text><![CDATA[aguacate.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="149" width="100" height="20" uuid="b5e4d18b-3f4b-4351-b7d0-10811b458b9c"/>
+				<text><![CDATA[espinacas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="169" width="146" height="20" uuid="8f85a2bf-c30e-4f9e-bbcf-88a9ed437efb"/>
+				<text><![CDATA[Tortilla de 2 huevos con ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="194" width="100" height="20" uuid="db35dbb1-3516-482b-ad51-0d46efb55016"/>
+				<text><![CDATA[solo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="181" width="138" height="20" uuid="ef4af7cf-c593-4373-87db-ed0d169076fc"/>
+				<text><![CDATA[espinacas y 1 tomate, café]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="174" width="100" height="20" uuid="ff0db6b8-58ae-42ea-aad0-81a3461f56fd"/>
+				<text><![CDATA[1 manzana y 2 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="189" width="100" height="20" uuid="0beab591-6d02-4047-987d-95ecbce1019d"/>
+				<text><![CDATA[nueces]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="181" width="121" height="20" uuid="40120bad-288d-4fad-a59b-0616222444bb"/>
+				<text><![CDATA[y 6 almendras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="169" width="121" height="20" uuid="7598c7e0-e8c8-49e6-ac47-fb26d345f6bc"/>
+				<text><![CDATA[Taza de frutos rojos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="214" width="146" height="20" uuid="37d0f0f8-7fbb-4d05-9105-c0c36b39d7dc"/>
+				<text><![CDATA[Tortilla de 2 huevos con ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="224" width="138" height="20" uuid="2a3ee370-239a-44dc-9b3b-cbd057f6f679"/>
+				<text><![CDATA[queso de cabra y café (solo)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="268" width="140" height="20" uuid="ae6936cc-61d5-4673-9c89-a21fb42985b9"/>
+				<text><![CDATA[setas y 1 tomate, café (solo)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="299" width="100" height="20" uuid="4000dc8b-d819-47cc-a061-2a505ef5ea6a"/>
+				<text><![CDATA[1 troso de queso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="310" width="100" height="20" uuid="0f78b213-9ea5-432e-a2be-e43c604ef07b"/>
+				<text><![CDATA[, tomate y aguacate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="349" width="139" height="20" uuid="a43c0c5e-b13d-4a1a-b1a3-065b5d2b8a6a"/>
+				<text><![CDATA[nueces, 1/4 de  aguaccate,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="359" width="100" height="20" uuid="310aa195-e2c6-40f9-b527-8ee295e06b2c"/>
+				<text><![CDATA[fruta, café(solo)]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

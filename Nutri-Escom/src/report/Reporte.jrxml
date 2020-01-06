@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bd2b4727-e404-4f2b-ac7e-c4529e25d802">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nombre" class="java.lang.String"/>
+	<parameter name="apellidos" class="java.lang.String"/>
+	<parameter name="boleta" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="peso" class="java.lang.String"/>
+	<parameter name="cantidad" class="java.lang.String"/>
+	<parameter name="tasa" class="java.lang.String"/>
+	<parameter name="estatura" class="java.lang.String"/>
+	<parameter name="imc" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<image>
+				<reportElement x="53" y="0" width="268" height="100" uuid="7f19c7cc-967e-47da-814f-496c1a645957"/>
+				<imageExpression><![CDATA["C:\\Users\\Sergio\\Desktop\\nutri.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="280" y="35" width="222" height="53" uuid="d9f277f0-a354-4acd-b87f-f91eff76fe76"/>
+				<textElement>
+					<font fontName="Adobe Caslon Pro" size="36" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Nutri - Escom ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="68" width="234" height="20" uuid="e77d5227-dfd1-41e8-8fac-c3b0c890b33a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[No hay nada mejor que una buena salud]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="14" width="100" height="20" uuid="0b306e6d-765a-48c5-99bd-c516bee71101"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="14" width="100" height="20" uuid="d8a0c1b1-5e7e-44f7-95b4-075459f6b6c2"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="271" y="14" width="100" height="20" uuid="e4899ccc-bb89-4143-9bc9-b5f8b9ef0046"/>
+				<textElement textAlignment="Justified">
+					<font size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Boleta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="14" width="146" height="20" uuid="176a03ef-7b7d-4137-a44c-e9189b6cd8e9"/>
+				<text><![CDATA[Fecha de la próxima consulta]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="100" height="20" uuid="7406a09d-12ad-4158-bd3c-47435709dcbb"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="0" width="100" height="20" uuid="29bea3ef-da60-44af-9c93-e4415d5061b7"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="0" width="100" height="20" uuid="74216f0d-d5f8-4740-9fef-812116ddcb8b"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{boleta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="0" width="100" height="20" uuid="7b1d0b20-9192-4655-9d0a-2f888ccb23ab"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="42" width="33" height="20" uuid="2ed50428-fbac-47dc-8a88-c66aae9ebc7f"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Peso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="42" width="88" height="20" uuid="a16252eb-57c6-486b-b9b2-fc4cf27ba7e8"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Cantidad de água]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="42" width="114" height="20" uuid="a4b6f6f0-e0a3-4fba-9376-2e8c411b00fa"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Tasa metabólica basal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="42" width="42" height="20" uuid="44dbbf0b-b9f7-499b-a10b-5aa05f61328b"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Estatura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="42" width="39" height="20" uuid="dd90126c-9246-44a7-a3fb-8f85e2ae2a47"/>
+				<text><![CDATA[IMC]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="33" height="20" uuid="d009233a-39d7-4747-b24e-dcf60e54a271"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{peso}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="43" y="0" width="21" height="20" uuid="91a5be91-2252-4566-83ec-7de791027090"/>
+				<text><![CDATA[kg]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="94" y="0" width="59" height="20" uuid="83d6f512-d978-4857-8c3f-f48187c5a01a"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{cantidad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="129" y="0" width="13" height="20" uuid="08e84120-403b-4806-adf2-3afdaf3cea76"/>
+				<text><![CDATA[L]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="199" y="0" width="72" height="20" uuid="7a2ffd13-b800-443c-a16d-c990cc45e0f6"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{tasa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="253" y="0" width="27" height="20" uuid="00b59cf6-d235-4e10-9197-dd83fb127991"/>
+				<text><![CDATA[cal]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="311" y="0" width="42" height="20" uuid="eeb5d403-f968-4892-9694-ed81e48bc020"/>
+				<textFieldExpression><![CDATA[$P{estatura}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="335" y="0" width="18" height="20" uuid="edd6c745-f5be-47f2-9e48-cd0f9081b321"/>
+				<text><![CDATA[cm]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="378" y="0" width="41" height="20" uuid="e8039f32-b4bc-4caf-9355-d55bc53ba031"/>
+				<textFieldExpression><![CDATA[$P{imc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
